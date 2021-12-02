@@ -7,25 +7,25 @@ import (
 	"strings"
 )
 
-type Day01 struct {
-	Day string
+type Day struct {
+
 }
 
-func (d *Day01) GetDay() string {
-	return d.Day
+func (d *Day) GetDay() string {
+	return "day01"
 }
 
-func (d *Day01) GetInput() string {
+func (d *Day) GetInput() string {
 	cnt, _ := ioutil.ReadFile(d.GetDay() + string(os.PathSeparator) + "input.txt")
 	return string(cnt)
 }
 
-func (d *Day01) GetReadme() string {
+func (d *Day) GetReadme() string {
 	cnt, _ := ioutil.ReadFile(d.GetDay() + string(os.PathSeparator) + "readme.MD")
 	return string(cnt)
 }
 
-func (d *Day01) Part1() string {
+func (d *Day) Part1() string {
 	var ctr int
 	splitted := strings.Fields(d.GetInput())
 	previous, _ := strconv.Atoi(splitted[0])
@@ -40,7 +40,7 @@ func (d *Day01) Part1() string {
 	return strconv.Itoa(ctr)
 }
 
-func (d *Day01) Part2() string {
+func (d *Day) Part2() string {
 	var ctr int
 	splitted := strings.Fields(d.GetInput())
 	var previous int
