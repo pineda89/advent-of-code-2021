@@ -4,6 +4,7 @@ import (
 	"advent-of-code-2021/day01"
 	"advent-of-code-2021/day02"
 	"advent-of-code-2021/day03"
+	"advent-of-code-2021/day04"
 	"advent-of-code-2021/templates"
 	"html/template"
 	"net/http"
@@ -14,6 +15,7 @@ var days = []Day{
 	&day01.Day{},
 	&day02.Day{},
 	&day03.Day{},
+	&day04.Day{},
 }
 
 type Day interface {
